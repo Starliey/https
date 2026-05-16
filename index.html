@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>植物治愈岛 | 一树一码 · 自然心语</title>
+    <title>植物治愈岛 · 桂花</title>
     <style>
         * {
             margin: 0;
@@ -12,38 +12,33 @@
         }
 
         body {
-            background: #eaf7e6;  /* 自然浅绿背景 */
-            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans', sans-serif;
-            padding: 20px 16px 40px;
+            background: #eef3e8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 24px 16px 48px;
             color: #1e3a2f;
         }
 
-        /* 主卡片 */
         .plant-card {
-            max-width: 600px;
+            max-width: 680px;
             margin: 0 auto;
-            background: #ffffffdd;
-            backdrop-filter: blur(0px);
             background: #ffffff;
             border-radius: 48px 32px 48px 32px;
-            box-shadow: 0 20px 35px -12px rgba(0, 32, 0, 0.2);
+            box-shadow: 0 20px 35px -12px rgba(0, 32, 0, 0.15);
             overflow: hidden;
-            transition: all 0.2s ease;
-            border: 1px solid #cfe3cf;
+            border: 1px solid #d8e6cf;
         }
 
-        /* 植物头部装饰 */
         .hero {
-            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            background: linear-gradient(135deg, #f9e7b3, #e9d48b);
             padding: 32px 24px 24px;
             text-align: center;
-            border-bottom: 1px solid #b9dcb5;
+            border-bottom: 1px solid #ecdbaa;
         }
 
         .plant-name {
-            font-size: 2.1rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: #1b4d1b;
+            color: #6b4c1a;
             letter-spacing: -0.3px;
             margin-bottom: 8px;
         }
@@ -51,44 +46,75 @@
         .latin-name {
             font-size: 0.9rem;
             font-style: italic;
-            color: #2c5e2c;
-            opacity: 0.8;
+            color: #8b6c3a;
             font-family: 'Georgia', serif;
         }
 
         .family-badge {
             display: inline-block;
-            background: #f1f8e9;
+            background: #fff2df;
             padding: 6px 14px;
             border-radius: 40px;
             font-size: 0.8rem;
             margin-top: 12px;
-            color: #2e6b2f;
+            color: #9e762e;
             font-weight: 500;
-            box-shadow: inset 0 0 0 1px #c8e0c1;
+            box-shadow: inset 0 0 0 1px #ffe0b5;
         }
 
-        /* 内容区域 */
         .content {
             padding: 28px 24px;
         }
 
-        .description {
-            background: #f9fef7;
-            padding: 18px 20px;
+        .pro-section {
+            background: #f7fcf3;
             border-radius: 28px;
+            padding: 20px;
             margin-bottom: 28px;
-            line-height: 1.55;
-            font-size: 1rem;
-            color: #2d4a2b;
-            border-left: 6px solid #8bc34a;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #deefd4;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
         }
 
-        /* 情绪寄语卡片 */
+        .pro-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #43733a;
+            border-left: 4px solid #b9d98b;
+            padding-left: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pro-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .pro-item {
+            border-bottom: 1px dashed #cfe2c4;
+            padding-bottom: 12px;
+        }
+
+        .pro-item strong {
+            color: #5b7c3e;
+            font-weight: 600;
+            display: inline-block;
+            min-width: 85px;
+        }
+
+        .pro-text {
+            color: #2c4d27;
+            line-height: 1.5;
+            margin-top: 6px;
+            font-size: 0.92rem;
+        }
+
         .quote-section {
             background: #fffaf0;
-            padding: 20px 20px;
+            padding: 20px;
             border-radius: 32px;
             margin-bottom: 28px;
             border: 1px solid #ffe0b5;
@@ -106,17 +132,11 @@
             gap: 8px;
         }
 
-        .quote-label span {
-            font-size: 1.2rem;
-        }
-
         .quote-text {
-            font-size: 1.24rem;
-            line-height: 1.45;
+            font-size: 1.2rem;
+            line-height: 1.48;
             font-weight: 450;
             color: #5a3e1b;
-            font-style: normal;
-            quotes: "“" "”" "‘" "’";
         }
 
         .quote-text::before {
@@ -135,7 +155,6 @@
             vertical-align: bottom;
         }
 
-        /* 音频区域 */
         .audio-box {
             background: #eef5ea;
             border-radius: 44px;
@@ -159,7 +178,6 @@
             outline: none;
         }
 
-        /* 课程按钮 */
         .course-btn {
             display: block;
             background: #2b7a3e;
@@ -174,7 +192,9 @@
             box-shadow: 0 8px 14px -6px rgba(33, 97, 33, 0.3);
             margin-top: 12px;
             border: none;
-            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            font-family: inherit;
         }
 
         .course-btn:hover {
@@ -190,7 +210,6 @@
             color: #6f8f6a;
         }
 
-        /* footer */
         .footer-note {
             text-align: center;
             margin-top: 24px;
@@ -199,242 +218,128 @@
             border-top: 1px solid #ddecd9;
             padding-top: 20px;
         }
-
-        /* 加载或错误 */
-        .error-message {
-            text-align: center;
-            padding: 40px 20px;
-            color: #b85c1a;
-        }
-
-        /* 加载动画小点 */
-        .loading {
-            text-align: center;
-            padding: 60px 20px;
-            color: #528a3b;
-        }
     </style>
 </head>
 <body>
-<div class="plant-card" id="plantCard">
-    <div class="loading" id="loadingState">🌱 正在读取植物信息 ...</div>
-    <div id="plantContent" style="display: none;"></div>
+<div class="plant-card">
+    <div class="hero">
+        <div class="plant-name">桂 花</div>
+        <div class="latin-name">Osmanthus fragrans Lour.</div>
+        <div class="family-badge">木犀科 · 木犀属 | 中国传统名花</div>
+    </div>
+    <div class="content">
+        <!-- 专业介绍板块 -->
+        <div class="pro-section">
+            <div class="pro-title">
+                <span>📘</span> 植物专业档案
+            </div>
+            <div class="pro-grid">
+                <div class="pro-item">
+                    <strong>🌿 形态特征</strong>
+                    <div class="pro-text">常绿灌木或小乔木，高3-5米，最高可达18米。叶片革质，椭圆形至长椭圆形，边缘有细锯齿。花簇生于叶腋，花冠黄白色、淡黄色或橙红色，极芳香。核果椭圆形，成熟时紫黑色。</div>
+                </div>
+                <div class="pro-item">
+                    <strong>🌍 生态习性</strong>
+                    <div class="pro-text">喜光，稍耐阴，喜温暖湿润气候，较耐寒。对土壤要求不严，以土层深厚、排水良好的微酸性沙质壤土为佳。不耐水湿，忌盐碱。花期9-10月，果期次年3-4月。</div>
+                </div>
+                <div class="pro-item">
+                    <strong>🐛 常见病虫害</strong>
+                    <div class="pro-text">主要病害有桂花叶斑病、炭疽病、褐斑病；虫害包括红蜘蛛、介壳虫、白粉虱、桂花叶螨等。防治方法：加强通风透光，及时清除病叶，早春喷洒石硫合剂，生长季用阿维菌素或吡虫啉喷雾。</div>
+                </div>
+                <div class="pro-item">
+                    <strong>🧑‍🌾 养护要点</strong>
+                    <div class="pro-text">浇水遵循“见干见湿”，避免积水。施肥以有机肥为主，花前增施磷钾肥。冬季适当修剪，去除病弱枝、过密枝。盆栽每2-3年换盆一次。北方地区冬季需移入室内防寒。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 情绪寄语 -->
+        <div class="quote-section">
+            <div class="quote-label"><span>🌸</span> 情绪寄语 · 月中桂子，清可绝尘</div>
+            <div class="quote-text">
+                你像一树桂花，不必争春，只在深秋悄然吐露芬芳。<br>
+                那些细碎的金黄，藏在叶间，却能让整个季节都变得温柔。<br>
+                即使无人注目，你也静静开花，用香气证明自己的存在。做好自己，自有来人。
+            </div>
+        </div>
+
+        <!-- 自然声音播放 -->
+        <div class="audio-box">
+            <div class="audio-icon">🎧</div>
+            <audio controls preload="metadata">
+                <!-- ⚠️ 请将此音频链接替换为自己现场录制的 mp3（15-30秒自然声音：风声、鸟鸣、叶片沙沙声） -->
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                您的浏览器不支持音频播放，请升级浏览器。
+            </audio>
+        </div>
+
+        <!-- 园艺课程入口按钮 -->
+        <button class="course-btn" id="courseDemoBtn">🌱 进入课程 · 家庭园艺养护与病虫害防治</button>
+        <div class="course-note">
+            ✨ 从浇水施肥到病虫害识别，让每一株植物健康生长
+        </div>
+    </div>
+    <div class="footer-note">
+        🌍 一树一码 · 聆听桂花香语  |  扫码获取专业养护知识
+    </div>
 </div>
 
 <script>
-    // --------------------------------------------------------------
-    // 植物数据库 (可根据需要任意增加修改)
-    // 每个植物包含：id, 中文名, 拉丁名, 科属, 简介, 情绪寄语, 音频URL, 课程演示URL
-    // 音频文件建议使用自己录制的mp3并托管在 GitHub 仓库 / 或者使用允许外链的云存储
-    // 下方示例中使用了占位音频 (在线示例音效，请务必替换成自己的真实录音)
-    // 为了演示，这里放置了 Freesound 的公开示例鸣叫/风声，但强烈建议同学们替换为自己的现场录制链接。
-    // 注意：实际使用时请将 audioUrl 改为自己上传的音频地址（例如放在 GitHub 仓库中的 /audio/ 文件夹下）
-    // --------------------------------------------------------------
-    const plantsData = [
-        {
-            id: 1,
-            name: "向日葵",
-            latin: "Helianthus annuus",
-            family: "菊科 · 向日葵属",
-            description: "向日葵因花序随太阳转动而得名，是坚韧与希望的象征。金黄的花盘充满生命力，广泛种植于温带地区。",
-            quote: "每天都把脸朝向阳光的人，其实内心也有阴天。但即使阴雨连绵，向日葵也在默默积蓄能量，等待下一次日出。你也一样，偶尔的低落不是后退，是在为更好的绽放蓄力。",
-            // 建议替换为你现场录制的风吹叶片声/鸟鸣，长度15~30秒，此处为示例风声音效 (公开协议)
-            audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",   // 仅作为占位示例，请更换！推荐使用自己录制的mp3链接
-            courseUrl: "#demo-course"   // 演示用的锚点，实际可替换为课程介绍页面链接
-        },
-        {
-            id: 2,
-            name: "蒲公英",
-            latin: "Taraxacum officinale",
-            family: "菊科 · 蒲公英属",
-            description: "多年生草本，种子带着白色冠毛随风飞翔。蒲公英全株可药用，代表自由与顽强的生命力。",
-            quote: "不是所有的种子都选择落地生根，有些选择随风去看看世界。就算目的地未知，乘风飞翔本身，就是一种自由。愿你也拥有随时出发的勇气。",
-            audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",   // 请替换为自己录制的鸟鸣/风吹声
-            courseUrl: "#demo-course"
-        },
-        {
-            id: 3,
-            name: "竹子",
-            latin: "Bambusoideae",
-            family: "禾本科 · 竹亚科",
-            description: "四季青翠，挺拔正直，生长迅速。竹子在中国文化中象征虚心、气节与坚韧。",
-            quote: "用了四年时间向下扎根，只为一个春天的拔节。被看见的成长只需要一个瞬间，不被看见的努力才最珍贵。有些路，慢慢走，才能走得更远。",
-            audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",   // 替换为叶片沙沙声或竹林风响
-            courseUrl: "#demo-course"
-        },
-        // 你可以在这里继续增加更多植物，例如：
-        // {
-        //     id: 4,
-        //     name: "薰衣草",
-        //     latin: "Lavandula angustifolia",
-        //     family: "唇形科 · 薰衣草属",
-        //     description: "紫色花穗散发宁静香气，助眠舒缓。",
-        //     quote: "安静地释放芬芳，不急不躁。真正的治愈，是温柔地接纳自己的每一面。",
-        //     audioUrl: "你的音频链接.mp3",
-        //     courseUrl: "课程链接或演示页面"
-        // }
-    ];
-
-    // 获取 URL 中的 plant 参数，决定展示哪个植物，默认展示第一个（id=1）
-    function getPlantIdFromUrl() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const idParam = urlParams.get('plant');
-        if (idParam === null) return 1;
-        const plantId = parseInt(idParam, 10);
-        return isNaN(plantId) ? 1 : plantId;
-    }
-
-    // 根据ID查找植物数据
-    function findPlantById(id) {
-        return plantsData.find(plant => plant.id === id);
-    }
-
-    // 渲染植物信息到页面
-    function renderPlant(plant) {
-        if (!plant) {
-            document.getElementById('loadingState').style.display = 'none';
-            const contentDiv = document.getElementById('plantContent');
-            contentDiv.style.display = 'block';
-            contentDiv.innerHTML = `<div class="error-message">🌿 哎呀，没有找到这棵植物的信息<br>请确认二维码链接是否正确~</div>`;
-            return;
-        }
-
-        // 隐藏加载，显示内容区域
-        document.getElementById('loadingState').style.display = 'none';
-        const contentDiv = document.getElementById('plantContent');
-        contentDiv.style.display = 'block';
-
-        // 构建完整html（注意课程按钮的链接，如果courseUrl是#demo-course可改为自定义的课程落地页，建议替换）
-        // 为了让课程入口在参赛作品中展示商业化设想，我们使用一个简单的弹窗演示或跳转到一个模拟课程页面。
-        // 但为了更好的体验，courseUrl 可以设置为一个固定的说明页面（若需要可新建另一个html，但为了便捷，我们做模态演示增强）
-        // 按照要求需要“课程入口按钮”，这里我们直接使用链接跳转到一个模拟课程介绍页面，不用真实支付。
-        // 为了方便评委查看商业模式，courseUrl将指向一个课程说明区域或者新页面（可以在当前网页增加一个简单课程弹窗）
-        // 但用户往往可以直接填写自己的课程落地页URL，这里先做演示，点击显示一个课程卡片模态框。
-        // 注意：实际使用时可以修改 courseUrl 为真实的课程介绍地址。
-        // 为了让作品完整，点击按钮会打开一个新页面演示课程规划（为了避免空链接，采用模态窗展示课程大纲）
-        // 但最初要求只是按钮入口，我们制作一个优雅的提示框演示“课程介绍”并保留真实的跳转选项。
-
-        // 构建最终内容
-        const html = `
-            <div class="hero">
-                <div class="plant-name">${escapeHtml(plant.name)}</div>
-                <div class="latin-name">${escapeHtml(plant.latin)}</div>
-                <div class="family-badge">${escapeHtml(plant.family)}</div>
-            </div>
-            <div class="content">
-                <div class="description">
-                    📖 ${escapeHtml(plant.description)}
+    // 课程演示弹窗（园艺方向：养护技巧、病虫害防治等）
+    const btn = document.getElementById('courseDemoBtn');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(40,45,30,0.85)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.zIndex = '9999';
+            modal.style.backdropFilter = 'blur(5px)';
+            
+            const modalCard = document.createElement('div');
+            modalCard.style.backgroundColor = '#fffef5';
+            modalCard.style.maxWidth = '340px';
+            modalCard.style.width = '85%';
+            modalCard.style.borderRadius = '48px';
+            modalCard.style.padding = '28px 24px';
+            modalCard.style.boxShadow = '0 25px 40px rgba(0,20,0,0.3)';
+            modalCard.style.textAlign = 'center';
+            modalCard.style.fontFamily = 'system-ui, sans-serif';
+            
+            modalCard.innerHTML = `
+                <div style="font-size:2.4rem;">🌿🪴</div>
+                <h3 style="margin: 12px 0 8px; color:#2a5c2e;">家庭园艺必修课</h3>
+                <p style="font-size:0.85rem; color:#5b431b; margin-bottom: 20px;">从0到1，学会照顾你的植物</p>
+                <div style="background:#f0f7ea; border-radius: 28px; padding: 16px; text-align: left; margin-bottom: 24px;">
+                    <div style="font-weight:bold; margin-bottom:12px;">📚 课程模块（商业模式演示）</div>
+                    <ul style="padding-left:20px; color:#2d4a2b; line-height:1.6;">
+                        <li>🌱 免费体验课：常见植物浇水与光照指南</li>
+                        <li>🐛 9.9元 病虫害识别速成（配实拍图鉴）</li>
+                        <li>🧪 29元 家庭有机施肥与土壤改良</li>
+                        <li>🛠️ 59元 全系列养护实操课（含修剪、换盆、繁殖）</li>
+                        <li>🌟 199元 年卡会员：无限次学习+每周专家答疑</li>
+                    </ul>
+                    <p style="margin-top:12px; font-size:0.7rem; background:#fff3d6; padding:6px; border-radius:20px;">📊 转化路径：扫码→试听课→9.9元入门→高阶课/会员</p>
                 </div>
-                <div class="quote-section">
-                    <div class="quote-label"><span>🌸</span> 情绪寄语 · 与植物同频</div>
-                    <div class="quote-text">${escapeHtml(plant.quote)}</div>
-                </div>
-                <div class="audio-box">
-                    <div class="audio-icon">🎧</div>
-                    <audio controls preload="metadata">
-                        <source src="${escapeHtml(plant.audioUrl)}" type="audio/mpeg">
-                        您的浏览器不支持音频播放，请升级浏览器。
-                    </audio>
-                </div>
-                <a href="javascript:void(0);" class="course-btn" id="demoCourseBtn">📚 进入植物疗愈课程（示例）</a>
-                <div class="course-note">✨ 扫码体验 · 课程包含深度自然知识 + 正念音频</div>
-            </div>
-            <div class="footer-note">
-                🌍 一树一码 · 聆听自然  |  扫码认识植物，带走一份治愈
-            </div>
-        `;
-        contentDiv.innerHTML = html;
-
-        // 为课程按钮添加交互：模拟商业变现展示（也可以改成一个真实课程链接）
-        const courseBtn = document.getElementById('demoCourseBtn');
-        if (courseBtn) {
-            courseBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                // 因为只是参赛演示，我们创建一个轻提示说明课程商业模式，也可直接跳转至示范课程页面。
-                // 但用户后期可以实际替换为真实课程链接，这里提供两种: 显示一个模态窗展示课程大纲示例，符合参赛商业逻辑展示
-                showCourseDemo(plant.name);
+                <button id="closeCourseModal" style="background:#2b7a3e; border:none; color:white; padding:10px 28px; border-radius:60px; font-weight:bold; cursor:pointer;"> 关闭 </button>
+            `;
+            modal.appendChild(modalCard);
+            document.body.appendChild(modal);
+            
+            const closeBtn = modalCard.querySelector('#closeCourseModal');
+            const closeModal = () => modal.remove();
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
             });
-        }
-    }
-
-    // 课程演示弹窗（展现完整课程设计思路，用于评委理解变现模式）
-    function showCourseDemo(plantName) {
-        // 创建模态框容器
-        const modal = document.createElement('div');
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '100%';
-        modal.style.height = '100%';
-        modal.style.backgroundColor = 'rgba(30,40,20,0.75)';
-        modal.style.display = 'flex';
-        modal.style.alignItems = 'center';
-        modal.style.justifyContent = 'center';
-        modal.style.zIndex = '9999';
-        modal.style.backdropFilter = 'blur(4px)';
-        
-        const modalCard = document.createElement('div');
-        modalCard.style.backgroundColor = '#fffef7';
-        modalCard.style.maxWidth = '320px';
-        modalCard.style.width = '85%';
-        modalCard.style.borderRadius = '48px';
-        modalCard.style.padding = '28px 24px';
-        modalCard.style.boxShadow = '0 25px 40px rgba(0,20,0,0.3)';
-        modalCard.style.textAlign = 'center';
-        modalCard.style.fontFamily = 'system-ui, sans-serif';
-        modalCard.style.position = 'relative';
-        
-        modalCard.innerHTML = `
-            <div style="font-size:2rem;">🌿📖</div>
-            <h3 style="margin: 12px 0 8px; color:#2a5c2e;">🌱 植物疗愈学堂 · 课程预览</h3>
-            <p style="font-size:0.9rem; color:#3b5c36; margin-bottom: 20px;">基于“${escapeHtml(plantName)}”的自然通感课程</p>
-            <div style="background:#f0f7ea; border-radius: 28px; padding: 16px; text-align: left; margin-bottom: 24px;">
-                <div style="font-weight:bold; margin-bottom:10px;">🎓 课程模块（示例）</div>
-                <ul style="padding-left:20px; color:#2d4a2b; line-height:1.6;">
-                    <li>📗 植物识别基础课 (9.9元体验)</li>
-                    <li>🎵 自然声音疗愈包 (30分钟原声)</li>
-                    <li>🧘 每周情绪正念 · 植物冥想</li>
-                    <li>🏞️ 线下植物徒步认领计划</li>
-                </ul>
-            </div>
-            <p style="font-size:0.8rem; color:#8b6b3d;">✨ 本课程为商业模式展示，扫码即可联系项目组</p>
-            <button id="closeModalBtn" style="margin-top: 20px; background:#2b7a3e; border:none; color:white; padding:10px 24px; border-radius: 60px; font-weight:bold; cursor:pointer;"> 关闭 </button>
-        `;
-        
-        modal.appendChild(modalCard);
-        document.body.appendChild(modal);
-        
-        const closeBtn = modalCard.querySelector('#closeModalBtn');
-        const closeModal = () => modal.remove();
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
         });
     }
-
-    // 简单的防XSS转义函数
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
-        });
-    }
-
-    // 主入口：加载植物信息
-    function init() {
-        const plantId = getPlantIdFromUrl();
-        const plant = findPlantById(plantId);
-        renderPlant(plant);
-        // 如果植物不存在，renderPlant会展示错误
-    }
-
-    // 启动
-    init();
 </script>
 </body>
 </html>
